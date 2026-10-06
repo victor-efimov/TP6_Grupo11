@@ -1,0 +1,50 @@
+
+
+- a). ¿Por qué no se dibuja la relación de agregación entre la clase CollectionProducto y Producto?
+
+En el diagrama original no se dibuja la línea de agregación entre CollectionProducto y Producto porque esa relación ya está representada como atributo dentro de la clase (productos : Producto[1..*]). Así que dibujar además la línea sería mostrar lo mismo dos veces.
+De todos modos, la relación existe y es una agregación: CollectionProducto es el agrupa objetos Producto.
+
+- b). ¿Cuántos atributos tiene la clase Factura? ¿Cuáles son los nombres de esos atributos?
+
+1. nroFactura
+2. fecha
+3. contador
+4. cliente
+5. detalle
+
+- c). ¿Cómo se llama la relación que se establece entre Factura y Detalle?
+
+Se llama relación de "composición", por lo que los objetos detalle dependen completamente de la factura a la que pertenecen.
+
+- d) ¿Cómo se llama la relación entre las clases Factura y Cliente?
+
+Nosotros establecimos una relación de "asociación", con la siguiente multiplicidad (cada factura está tiene a un unico cliente, pero un cliente puede tener muchas facturas a su nombre).
+
+- e). ¿Por qué los atributos de las clases Collections son públicos?
+
+Son públicas para poder acceder a ellos directamente desde otras clases, el objetivo de las clases collections no es proteger datos, sino permitir acceso global y rápido durante la ejecución del programa.
+
+- f). Describa las características de todos los métodos de la clase CollectionClientes.
+
+1.	agregarCliente: Permite agregar un nuevo cliente a la colección, siempre que no exista previamente uno con el mismo DNI.
+
+- Es público.
+- Es estático.
+- No retorna ningun valor
+- Recibe como parámetro un objeto de tipo Cliente que se desea  agregar
+- Filtros para ver si el objeto esta en null y para que no se ingrese un cliente con DNI repetido
+
+2.	buscarCliente: Recorre la lista buscando un cliente cuyo DNI sea igual que el DNI que el usuario ingreso por teclado.
+
+- Es público.
+- Es estático.
+- Devuelve un objeto Cliente si se encuentra, sino retorna null.
+- Recibe como parámetro el dni del cliente a buscar.
+
+3.	precargarClientes: Carga en la lista un conjunto de clientes para iniciar y probar el programa.
+
+- Es público.
+- Es estático.
+- No retorna ningun valor
+- No recibe parámetros.
