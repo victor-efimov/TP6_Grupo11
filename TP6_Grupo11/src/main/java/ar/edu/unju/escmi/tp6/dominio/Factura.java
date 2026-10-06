@@ -1,4 +1,4 @@
-package dominio;
+package main.java.ar.edu.unju.escmi.tp6.dominio;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

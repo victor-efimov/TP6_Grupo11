@@ -1,4 +1,4 @@
-package dominio;
+package main.java.ar.edu.unju.escmi.tp6.dominio;
 
 public class Producto {
     private long codigo;

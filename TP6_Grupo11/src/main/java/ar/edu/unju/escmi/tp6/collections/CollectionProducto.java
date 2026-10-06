@@ -1,9 +1,9 @@
-package collections;
+package main.java.ar.edu.unju.escmi.tp6.collections;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dominio.Producto;
+import main.java.ar.edu.unju.escmi.tp6.dominio.Producto;
 
 public class CollectionProducto {
 
