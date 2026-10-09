@@ -2,31 +2,36 @@ package ar.edu.unju.escmi.tp6.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import main.java.ar.edu.unju.escmi.tp6.dominio.Producto;
-import main.java.ar.edu.unju.escmi.tp6.dominio.Stock;
+import ar.edu.unju.escmi.tp6.dominio.Producto;
+import ar.edu.unju.escmi.tp6.dominio.Stock;
 
 class StockTest {
 
+    private Stock stock;
+
+    @BeforeEach
+    void setUp() {
+        Producto producto = new Producto(1L, "Lavarropas", 500000.0, "Nacional", 10, false);
+        stock = new Stock(10, producto);
+    }
+
     @Test
-    void testStockSeReduceEnCantidadIndicada() {
-
-        Producto producto = new Producto(
-                1L,
-                "Lavarropas",
-                500000.0,
-                "Nacional",
-                10,
-                false
-        );
-
-        Stock stock = new Stock(10, producto);
-
-        int cantidad = 3;
-
-        stock.actualizarStock(stock.getCantidad() - cantidad);
-
+    void testStockSeDecrementaEnLaCantidadIndicada() {
+        stock.descontarStock(3);
         assertEquals(7, stock.getCantidad());
+    }
+
+    @Test
+    void testNoPermiteDescontarMasQueElStockDisponible() {
+        assertThrows(IllegalArgumentException.class, () -> stock.descontarStock(11));
+        assertEquals(10, stock.getCantidad());
+    }
+
+    @Test
+    void testValidarStockDisponible() {
+        assertTrue(stock.validarStockDisponible());
     }
 }

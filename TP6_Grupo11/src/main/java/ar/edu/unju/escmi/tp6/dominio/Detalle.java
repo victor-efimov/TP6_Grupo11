@@ -1,4 +1,4 @@
-package main.java.ar.edu.unju.escmi.tp6.dominio;
+package ar.edu.unju.escmi.tp6.dominio;
 
 public class Detalle {
     private int cantidad;

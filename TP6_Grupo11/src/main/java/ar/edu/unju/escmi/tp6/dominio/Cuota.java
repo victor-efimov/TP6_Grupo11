@@ -1,5 +1,4 @@
-package main.java.ar.edu.unju.escmi.tp6.dominio;
-
+package ar.edu.unju.escmi.tp6.dominio;
 import java.time.LocalDate;
 
 public class Cuota {

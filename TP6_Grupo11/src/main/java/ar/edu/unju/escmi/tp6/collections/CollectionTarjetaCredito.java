@@ -1,4 +1,4 @@
-package main.java.ar.edu.unju.escmi.tp6.collections;
+package ar.edu.unju.escmi.tp6.collections;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -1,17 +1,15 @@
-package main.java.ar.edu.unju.escmi.tp6.dominio;
-
+package ar.edu.unju.escmi.tp6.dominio;
 
 public class Stock {
-	
-	
-	
+
 	private int cantidad;
-	private Producto producto;	
+	private Producto producto;
+
 	public Stock(int cantidad, Producto producto) {
 		this.cantidad = cantidad;
 		this.producto = producto;
 	}
-	
+
 	public int getCantidad() {
 		return cantidad;
 	}
@@ -29,10 +27,23 @@ public class Stock {
 	}
 
 	public boolean validarStockDisponible() {
-		return cantidad!=0;
+		return cantidad != 0;
 	}
+
 	public void actualizarStock(int nuevo) {
-		//se debe verificar que el numero sea mayor que -1 antes
-		cantidad=nuevo;
+		if (nuevo < 0) {
+			throw new IllegalArgumentException("El stock no puede ser negativo.");
+		}
+		cantidad = nuevo;
+	}
+
+	public void descontarStock(int cantidadADescontar) {
+		if (cantidadADescontar <= 0) {
+			throw new IllegalArgumentException("La cantidad debe ser mayor a cero.");
+		}
+		if (cantidadADescontar > this.cantidad) {
+			throw new IllegalArgumentException("Stock insuficiente.");
+		}
+		this.cantidad -= cantidadADescontar;
 	}
 }

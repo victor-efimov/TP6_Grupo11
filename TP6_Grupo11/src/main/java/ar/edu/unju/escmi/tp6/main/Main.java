@@ -1,4 +1,4 @@
-package main.java.ar.edu.unju.escmi.tp6.main;
+package ar.edu.unju.escmi.tp6.main;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

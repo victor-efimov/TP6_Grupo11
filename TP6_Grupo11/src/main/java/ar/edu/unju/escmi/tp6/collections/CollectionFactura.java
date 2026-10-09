@@ -1,4 +1,4 @@
-package main.java.ar.edu.unju.escmi.tp6.collections;
+package ar.edu.unju.escmi.tp6.collections;
 
 import java.util.ArrayList;
 import java.util.List;
