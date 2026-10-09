@@ -40,8 +40,22 @@ public class CollectionProducto {
         return null;
     }
 
-    public static void consultarStock() {
-        System.out.println("\n--- STOCK DE ELECTRODOMÉSTICOS AHORA 20 ---");
+    public static void buscarProductoPorOrigen(String origen) {
+        System.out.println("\n--- PRODUCTOS ORIGEN: " + origen + " ---");
+        boolean encontrado = false;
+        for (Producto p : productos) {
+            if (p.getOrigenFabricacion().equalsIgnoreCase(origen)) {
+                System.out.println(p);
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("No se encontraron productos con origen " + origen);
+        }
+    }
+
+    public static void mostrarProductosAhora20() {
+        System.out.println("\n--- PRODUCTOS DISPONIBLES AHORA 20 ---");
         for (Producto p : productos) {
             System.out.println(p);
         }

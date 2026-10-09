@@ -3,6 +3,7 @@ package main.java.ar.edu.unju.escmi.tp6.dominio;
 public class Detalle {
     private int cantidad;
     private double importe;
+    private boolean esElectrodomestico;
     private Producto producto;
 
     public Detalle() {
@@ -11,6 +12,9 @@ public class Detalle {
     public Detalle(int cantidad, Producto producto) {
         this.cantidad = cantidad;
         this.producto = producto;
+        if (producto != null) {
+            this.esElectrodomestico = !producto.isEsCelular();
+        }
         this.importe = calcularImporte();
     }
 
@@ -19,6 +23,9 @@ public class Detalle {
 
     public double getImporte() { return importe; }
     public void setImporte(double importe) { this.importe = importe; }
+
+    public boolean isEsElectrodomestico() { return esElectrodomestico; }
+    public void setEsElectrodomestico(boolean esElectrodomestico) { this.esElectrodomestico = esElectrodomestico; }
 
     public Producto getProducto() { return producto; }
     public void setProducto(Producto producto) { this.producto = producto; }

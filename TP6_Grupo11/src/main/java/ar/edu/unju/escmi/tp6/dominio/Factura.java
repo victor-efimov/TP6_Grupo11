@@ -40,6 +40,16 @@ public class Factura {
         return total;
     }
 
+    public boolean esFacturaAhora20() {
+        if (detalles.isEmpty()) return false;
+        for (Detalle d : detalles) {
+            if (d.getProducto() == null || !"Nacional".equalsIgnoreCase(d.getProducto().getOrigenFabricacion())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
