@@ -3,7 +3,7 @@ package ar.edu.unju.escmi.tp6.collections;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.ar.edu.unju.escmi.tp6.dominio.Cliente;
+import ar.edu.unju.escmi.tp6.dominio.Cliente;
 
 public class CollectionCliente {
 

@@ -3,7 +3,7 @@ package ar.edu.unju.escmi.tp6.collections;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.ar.edu.unju.escmi.tp6.dominio.Producto;
+import ar.edu.unju.escmi.tp6.dominio.Producto;
 
 public class CollectionProducto {
 
@@ -38,6 +38,10 @@ public class CollectionProducto {
             }
         }
         return null;
+    }
+
+    public static boolean esProductoAhora20(Producto producto) {
+        return producto != null && "Nacional".equalsIgnoreCase(producto.getOrigenFabricacion());
     }
 
     public static void buscarProductoPorOrigen(String origen) {

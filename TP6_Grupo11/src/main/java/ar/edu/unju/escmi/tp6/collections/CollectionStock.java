@@ -3,8 +3,8 @@ package ar.edu.unju.escmi.tp6.collections;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.ar.edu.unju.escmi.tp6.dominio.Producto;
-import main.java.ar.edu.unju.escmi.tp6.dominio.Stock;
+import ar.edu.unju.escmi.tp6.dominio.Producto;
+import ar.edu.unju.escmi.tp6.dominio.Stock;
 
 public class CollectionStock {
 

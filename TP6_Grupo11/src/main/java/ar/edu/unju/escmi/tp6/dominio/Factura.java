@@ -21,6 +21,12 @@ public class Factura {
         this.cliente = cliente;
     }
 
+    public Factura(Cliente cliente, LocalDate fecha) {
+        this();
+        this.cliente = cliente;
+        this.fecha = fecha;
+    }
+
     public long getNroFactura() { return nroFactura; }
     public LocalDate getFecha() { return fecha; }
     public Cliente getCliente() { return cliente; }
